@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+a:hover{
+	color: 0;
+    text-decoration: none;
+}
+a:focus{
+    text-decoration: none;
+}
+.main-container{
+	//margin-top: 50px;
+}
+.btn-primary{
+    color: white!important;
+    background-color: #42a2eb!important;
+    border: solid 1px #42a2eb!important;
+}
+.btn-default{
+    background-color: #fff!important;
+    color: #3c3c3c;
+    border: solid 1px #c4c4c4;
+}
+.no-padding{
+	padding: initial;
+}
+
+.modal-backdrop{
+	background : white !important;
+}
+.modal-backdrop.show {
+    opacity: .7 !important;
+}
+
+/*form select box*/
+.form-select .mat-form-field-underline, .header-dropdown .mat-form-field-underline{
+    width: 0 !important;
+}
+.form-select .mat-form-field-wrapper, .header-dropdown .mat-form-field-wrapper{
+    padding-bottom: 0 !important;
+}
+.form-select .mat-form-field-infix, .header-dropdown .mat-form-field-infix{
+    border-top: none !important;
+}
+/*header dropdown */
+.header-dropdown .mat-form-field-infix{
+    width: initial;
+}
+.header-dropdown .mat-select-value{
+    display: inline;
+}
+.header-dropdown .mat-select-value-text{
+    color: black;
+    font-weight: bold;
+}
+
+/*filter checkbox list*/
+.filter-checkbox-list .mat-list .mat-list-item{
+    height: 38px;
+    font-size: 14px;
+    font-weight: initial;
+}
+.filter-checkbox-list mat-expansion-panel-header{
+    font-weight: bold;
+}
+.filter-checkbox-list label{
+    font-weight: initial;
+}
+
+/* table p
+aginator */
+.footer-bar .mat-paginator {
+    background: transparent;
+}
+
+/*button link*/
+.btn-link:focus, .btn-link:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+/*filter search bar */
+.search-bar{
+    margin: 10px 0 !important;
+    padding: 5px !important;
+}
+
+/*filter expansion panel*/
+.filter-section .mat-list{
+    padding-top: 0 !important;
+}
+.filter-section .mat-expansion-panel-header{
+    height: 50px !important;
+}
+.filter-section  .mat-checkbox-inner-container{
+    width : 16px !important;
+    height : 16px !important;
+}
+.mat-progress-bar{
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 999999;
+}

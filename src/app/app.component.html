@@ -1,0 +1,45 @@
+<div class="container-fluid">
+		<mat-progress-bar mode="indeterminate" *ngIf="showLoader"></mat-progress-bar>
+		<!-- header section -->
+		<div class="header-bar" *ngIf="userData!=null">
+			<div class="">
+				<div class="col-md-8 header-menu">
+					<ul>
+						<li routerLinkActive="active"><a href="javascript:void(0)" routerLink="/dashboard">Dashboard</a></li>
+						<li routerLinkActive="active"><a href="javascript:void(0)" routerLink="/instructor-list">Students</a></li>
+						<li routerLinkActive="active"><a href="javascript:void(0)" routerLink="/add-instructor">Instructors</a></li>
+						<li routerLinkActive="active"><a href="javascript:void(0)" routerLink="/view-student">Vehicles</a></li>
+						<li><a href="#">Classes</a></li>
+						<li routerLinkActive="active"><a href="#" routerLink="/create-branch">Branches </a></li>
+						<li><a href="#">Reports </a></li>
+						<li><a href="#">Accounts</a></li>
+						<li><a href="#">Administration</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 text-right">
+					<ul>
+						<li><img src="assets/img/plus.png"></li>
+						<li><img src="assets/img/notification.png"></li>
+						<li class="menu-profile" (click)="logout()">
+							<img src="assets/img/profile.png">
+							<!-- <img src="assets/img/profile.png" [matMenuTriggerFor]="menu">
+							<mat-menu #menu="matMenu">
+							  <button mat-menu-item>
+							    <mat-icon>dialpad</mat-icon>
+							    <span>Redial</span>
+							  </button>
+							</mat-menu> -->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="row">
+			<router-outlet></router-outlet>
+		</div> -->
+
+	<div class="main-container">
+		<router-outlet></router-outlet>
+	</div>
+</div>
