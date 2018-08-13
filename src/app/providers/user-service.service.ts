@@ -14,4 +14,9 @@ export class UserService {
 		return this.http.post(this.rootUrl+'login',credentials,{ headers: reqHeader });
 	}
 
+	requestData(apiUrl:string,reqData:any){
+		var reqHeader = new HttpHeaders();
+		return this.http.get(this.rootUrl+''+apiUrl,reqData);
+	}
+
 }

@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgProgressModule, NgProgressInterceptor } from 'ngx-progressbar';
 
 /*angular material module*/
 import { 
@@ -56,6 +57,7 @@ import { AlertComponent } from './dialogbox/alert/alert.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    NgProgressModule,
     ReactiveFormsModule,
     AppRoutingModule,
     //angular material modules

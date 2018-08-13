@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(public router:Router) { }
+  constructor(public router:Router,public cevent: EventServiceService) { }
 
   	intercept(req: HttpRequest<any>, next: HttpHandler):any{
 		/*if(req.headers.get('no-Auth') == "true"){
@@ -36,14 +36,24 @@ export class AuthInterceptor implements HttpInterceptor {
 			this.router.navigate('/login');
 		}*/
 
-		const request = req.clone({
+
+		/*const request = req.clone({
 			headers: req.headers.set("Authorization", "Bearer "+localStorage.getItem('userToken'))
+		});*/
+
+		const request = req.clone({
+			headers: req.headers.set("Authorization", "Bearer zdWIiOjEsImlzcyI6Imh")
 		});
+
 		 return next.handle(request).pipe(catchError(err => {
-            if (err.status === 401) {
+            if (err.status === 500) {
+            	console.log('500 error');
+            	this.cevent.removeUserToken();
+            	this.router.navigate(['/login']);
+            	
                 // auto logout if 401 response returned from api
                 //this.authenticationService.logout();
-                location.reload(true);
+                //location.reload(true);
             }
             
             const error = err.error.message || err.statusText;

@@ -14,6 +14,11 @@ export class EventServiceService {
     this.change.emit(this.userToken);
   }
 
+  removeUserToken(){
+  	localStorage.removeItem('userToken');
+  	return null;
+  }
+
   
 
 }

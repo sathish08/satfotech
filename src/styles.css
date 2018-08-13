@@ -101,3 +101,6 @@ aginator */
     top: 0 !important;
     z-index: 999999;
 }
+.mat-dialog-container{
+    padding: 0 !important;
+}

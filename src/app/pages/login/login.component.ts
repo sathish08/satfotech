@@ -5,13 +5,9 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { EventServiceService } from '../../providers/event-service.service';
 import { UserService } from '../../providers/user-service.service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AlertComponent } from '../../dialogbox/alert/alert.component';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-login',
@@ -91,21 +87,5 @@ export class LoginComponent implements OnInit {
 	ngOnInit() {
 		this.cevent.setUserToken(null);
 	}
-
-}
-
-@Component({
-  selector: 'dialog-overview-example-dialog',
-  templateUrl: '../../dialogbox/alert/alert.component.html',
-})
-export class DialogOverviewExampleDialog {
-
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 
 }
