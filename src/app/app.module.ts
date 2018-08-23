@@ -81,6 +81,11 @@ import { AlertComponent } from './dialogbox/alert/alert.component';
       useClass: AuthInterceptor,
       multi: true
     },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NgProgressInterceptor,
+      multi: true
+    },
     EventServiceService
   ],
   bootstrap: [AppComponent]
